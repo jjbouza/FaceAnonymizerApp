@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4364762B2433F7EE002CFB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364762A2433F7EE002CFB78 /* AppDelegate.swift */; };
+		4364762D2433F7EE002CFB78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364762C2433F7EE002CFB78 /* SceneDelegate.swift */; };
+		4364762F2433F7EE002CFB78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364762E2433F7EE002CFB78 /* ContentView.swift */; };
+		436476312433F7F0002CFB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436476302433F7F0002CFB78 /* Assets.xcassets */; };
+		436476342433F7F0002CFB78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436476332433F7F0002CFB78 /* Preview Assets.xcassets */; };
+		436476372433F7F0002CFB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436476352433F7F0002CFB78 /* LaunchScreen.storyboard */; };
+		43CFB5412433F9CE001C7327 /* SSFDModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB53F2433F9CE001C7327 /* SSFDModule.mm */; };
+		43CFB54A243410BD001C7327 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB549243410BC001C7327 /* ImageExtension.swift */; };
+		43CFB54D243411CF001C7327 /* preprocess_ssfd.pt in Resources */ = {isa = PBXBuildFile; fileRef = 43CFB54B243411CF001C7327 /* preprocess_ssfd.pt */; };
+		43CFB54E243411CF001C7327 /* postprocess_ssfd.pt in Resources */ = {isa = PBXBuildFile; fileRef = 43CFB54C243411CF001C7327 /* postprocess_ssfd.pt */; };
+		43CFB55124342410001C7327 /* sfd_detector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB55024342410001C7327 /* sfd_detector.mlmodel */; };
+		43CFB5532437A70A001C7327 /* keypointrcnn.pt in Resources */ = {isa = PBXBuildFile; fileRef = 43CFB5522437A70A001C7327 /* keypointrcnn.pt */; };
+		43CFB5562437A7A9001C7327 /* KeypointRCNNModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB5552437A7A9001C7327 /* KeypointRCNNModule.mm */; };
+		43CFB5582437B583001C7327 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB5572437B583001C7327 /* Modules.swift */; };
+		43CFB55F243AB68B001C7327 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB55E243AB68B001C7327 /* ModelDataHandler.swift */; };
+		43CFB563243AB694001C7327 /* TFLiteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB560243AB694001C7327 /* TFLiteExtension.swift */; };
+		43CFB564243AB694001C7327 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB561243AB694001C7327 /* CGSizeExtension.swift */; };
+		43CFB565243AB694001C7327 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB562243AB694001C7327 /* CVPixelBufferExtension.swift */; };
+		43CFB567243AB6BC001C7327 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CFB566243AB6BB001C7327 /* Constants.swift */; };
+		43CFB569243ABB8F001C7327 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 43CFB568243ABB8F001C7327 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */; };
+		43F4B35755CD0DC86A1937D6 /* libPods-Face Anonymizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 355484AEDE9087834FD4C563 /* libPods-Face Anonymizer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		355484AEDE9087834FD4C563 /* libPods-Face Anonymizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Face Anonymizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		436476272433F7EE002CFB78 /* Face Anonymizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Anonymizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4364762A2433F7EE002CFB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4364762C2433F7EE002CFB78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4364762E2433F7EE002CFB78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		436476302433F7F0002CFB78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		436476332433F7F0002CFB78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		436476362433F7F0002CFB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		436476382433F7F0002CFB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43CFB53D2433F9CE001C7327 /* Face Anonymizer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Face Anonymizer-Bridging-Header.h"; sourceTree = "<group>"; };
+		43CFB53E2433F9CE001C7327 /* SSFDModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFDModule.h; sourceTree = "<group>"; };
+		43CFB53F2433F9CE001C7327 /* SSFDModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SSFDModule.mm; sourceTree = "<group>"; };
+		43CFB549243410BC001C7327 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		43CFB54B243411CF001C7327 /* preprocess_ssfd.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = preprocess_ssfd.pt; sourceTree = "<group>"; };
+		43CFB54C243411CF001C7327 /* postprocess_ssfd.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = postprocess_ssfd.pt; sourceTree = "<group>"; };
+		43CFB55024342410001C7327 /* sfd_detector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = sfd_detector.mlmodel; path = ../models/sfd_detector.mlmodel; sourceTree = "<group>"; };
+		43CFB5522437A70A001C7327 /* keypointrcnn.pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = keypointrcnn.pt; path = "Face Anonymizer/models/keypointrcnn.pt"; sourceTree = SOURCE_ROOT; };
+		43CFB5542437A794001C7327 /* KeypointRCNNModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeypointRCNNModule.h; sourceTree = "<group>"; };
+		43CFB5552437A7A9001C7327 /* KeypointRCNNModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KeypointRCNNModule.mm; sourceTree = "<group>"; };
+		43CFB5572437B583001C7327 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
+		43CFB55E243AB68B001C7327 /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		43CFB560243AB694001C7327 /* TFLiteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFLiteExtension.swift; sourceTree = "<group>"; };
+		43CFB561243AB694001C7327 /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
+		43CFB562243AB694001C7327 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
+		43CFB566243AB6BB001C7327 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43CFB568243ABB8F001C7327 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite; path = "Face Anonymizer/models/posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite"; sourceTree = SOURCE_ROOT; };
+		5C0EB2D717FA4013B9051300 /* Pods-Face Anonymizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face Anonymizer.release.xcconfig"; path = "Target Support Files/Pods-Face Anonymizer/Pods-Face Anonymizer.release.xcconfig"; sourceTree = "<group>"; };
+		5F49A8F9B9B8E126E3AA1995 /* Pods-Face Anonymizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face Anonymizer.debug.xcconfig"; path = "Target Support Files/Pods-Face Anonymizer/Pods-Face Anonymizer.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		436476242433F7EE002CFB78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F4B35755CD0DC86A1937D6 /* libPods-Face Anonymizer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BD93843D40985CD71DA79E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F49A8F9B9B8E126E3AA1995 /* Pods-Face Anonymizer.debug.xcconfig */,
+				5C0EB2D717FA4013B9051300 /* Pods-Face Anonymizer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4364761E2433F7EE002CFB78 = {
+			isa = PBXGroup;
+			children = (
+				436476292433F7EE002CFB78 /* Face Anonymizer */,
+				436476282433F7EE002CFB78 /* Products */,
+				1BD93843D40985CD71DA79E5 /* Pods */,
+				9AF6ECDBD903F0ABA8DD38CA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		436476282433F7EE002CFB78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				436476272433F7EE002CFB78 /* Face Anonymizer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		436476292433F7EE002CFB78 /* Face Anonymizer */ = {
+			isa = PBXGroup;
+			children = (
+				43CFB55D243AB66E001C7327 /* KeypointDataHandler */,
+				43CFB55C243AB651001C7327 /* Extensions */,
+				43CFB5422433F9FD001C7327 /* Modules */,
+				43CFB5382433F914001C7327 /* TorchBridge */,
+				4364762A2433F7EE002CFB78 /* AppDelegate.swift */,
+				43CFB566243AB6BB001C7327 /* Constants.swift */,
+				43CFB5572437B583001C7327 /* Modules.swift */,
+				4364762C2433F7EE002CFB78 /* SceneDelegate.swift */,
+				4364762E2433F7EE002CFB78 /* ContentView.swift */,
+				436476302433F7F0002CFB78 /* Assets.xcassets */,
+				436476352433F7F0002CFB78 /* LaunchScreen.storyboard */,
+				436476382433F7F0002CFB78 /* Info.plist */,
+				436476322433F7F0002CFB78 /* Preview Content */,
+			);
+			path = "Face Anonymizer";
+			sourceTree = "<group>";
+		};
+		436476322433F7F0002CFB78 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				436476332433F7F0002CFB78 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43CFB5382433F914001C7327 /* TorchBridge */ = {
+			isa = PBXGroup;
+			children = (
+				43CFB5542437A794001C7327 /* KeypointRCNNModule.h */,
+				43CFB5552437A7A9001C7327 /* KeypointRCNNModule.mm */,
+				43CFB53E2433F9CE001C7327 /* SSFDModule.h */,
+				43CFB53F2433F9CE001C7327 /* SSFDModule.mm */,
+				43CFB53D2433F9CE001C7327 /* Face Anonymizer-Bridging-Header.h */,
+			);
+			path = TorchBridge;
+			sourceTree = "<group>";
+		};
+		43CFB5422433F9FD001C7327 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				43CFB568243ABB8F001C7327 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */,
+				43CFB5522437A70A001C7327 /* keypointrcnn.pt */,
+				43CFB55024342410001C7327 /* sfd_detector.mlmodel */,
+				43CFB54C243411CF001C7327 /* postprocess_ssfd.pt */,
+				43CFB54B243411CF001C7327 /* preprocess_ssfd.pt */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		43CFB55C243AB651001C7327 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43CFB549243410BC001C7327 /* ImageExtension.swift */,
+				43CFB561243AB694001C7327 /* CGSizeExtension.swift */,
+				43CFB562243AB694001C7327 /* CVPixelBufferExtension.swift */,
+				43CFB560243AB694001C7327 /* TFLiteExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		43CFB55D243AB66E001C7327 /* KeypointDataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				43CFB55E243AB68B001C7327 /* ModelDataHandler.swift */,
+			);
+			path = KeypointDataHandler;
+			sourceTree = "<group>";
+		};
+		9AF6ECDBD903F0ABA8DD38CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				355484AEDE9087834FD4C563 /* libPods-Face Anonymizer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		436476262433F7EE002CFB78 /* Face Anonymizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4364763B2433F7F0002CFB78 /* Build configuration list for PBXNativeTarget "Face Anonymizer" */;
+			buildPhases = (
+				2E940F8E6ACB90F009782D2E /* [CP] Check Pods Manifest.lock */,
+				436476232433F7EE002CFB78 /* Sources */,
+				436476242433F7EE002CFB78 /* Frameworks */,
+				436476252433F7EE002CFB78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Face Anonymizer";
+			productName = "Face Anonymizer";
+			productReference = 436476272433F7EE002CFB78 /* Face Anonymizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4364761F2433F7EE002CFB78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Jose Bouza";
+				TargetAttributes = {
+					436476262433F7EE002CFB78 = {
+						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
+					};
+				};
+			};
+			buildConfigurationList = 436476222433F7EE002CFB78 /* Build configuration list for PBXProject "Face Anonymizer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4364761E2433F7EE002CFB78;
+			productRefGroup = 436476282433F7EE002CFB78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				436476262433F7EE002CFB78 /* Face Anonymizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		436476252433F7EE002CFB78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				436476372433F7F0002CFB78 /* LaunchScreen.storyboard in Resources */,
+				43CFB5532437A70A001C7327 /* keypointrcnn.pt in Resources */,
+				43CFB54E243411CF001C7327 /* postprocess_ssfd.pt in Resources */,
+				43CFB54D243411CF001C7327 /* preprocess_ssfd.pt in Resources */,
+				43CFB569243ABB8F001C7327 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite in Resources */,
+				436476342433F7F0002CFB78 /* Preview Assets.xcassets in Resources */,
+				436476312433F7F0002CFB78 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E940F8E6ACB90F009782D2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Face Anonymizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		436476232433F7EE002CFB78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43CFB55124342410001C7327 /* sfd_detector.mlmodel in Sources */,
+				43CFB5582437B583001C7327 /* Modules.swift in Sources */,
+				43CFB5412433F9CE001C7327 /* SSFDModule.mm in Sources */,
+				4364762B2433F7EE002CFB78 /* AppDelegate.swift in Sources */,
+				43CFB5562437A7A9001C7327 /* KeypointRCNNModule.mm in Sources */,
+				43CFB565243AB694001C7327 /* CVPixelBufferExtension.swift in Sources */,
+				43CFB54A243410BD001C7327 /* ImageExtension.swift in Sources */,
+				43CFB567243AB6BC001C7327 /* Constants.swift in Sources */,
+				43CFB564243AB694001C7327 /* CGSizeExtension.swift in Sources */,
+				4364762D2433F7EE002CFB78 /* SceneDelegate.swift in Sources */,
+				43CFB563243AB694001C7327 /* TFLiteExtension.swift in Sources */,
+				4364762F2433F7EE002CFB78 /* ContentView.swift in Sources */,
+				43CFB55F243AB68B001C7327 /* ModelDataHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		436476352433F7F0002CFB78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				436476362433F7F0002CFB78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		436476392433F7F0002CFB78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4364763A2433F7F0002CFB78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4364763C2433F7F0002CFB78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F49A8F9B9B8E126E3AA1995 /* Pods-Face Anonymizer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Face Anonymizer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Face Anonymizer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "bouza.Face-Anonymizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Face Anonymizer/TorchBridge/Face Anonymizer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4364763D2433F7F0002CFB78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0EB2D717FA4013B9051300 /* Pods-Face Anonymizer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Face Anonymizer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Face Anonymizer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "bouza.Face-Anonymizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Face Anonymizer/TorchBridge/Face Anonymizer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		436476222433F7EE002CFB78 /* Build configuration list for PBXProject "Face Anonymizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				436476392433F7F0002CFB78 /* Debug */,
+				4364763A2433F7F0002CFB78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4364763B2433F7F0002CFB78 /* Build configuration list for PBXNativeTarget "Face Anonymizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4364763C2433F7F0002CFB78 /* Debug */,
+				4364763D2433F7F0002CFB78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4364761F2433F7EE002CFB78 /* Project object */;
+}

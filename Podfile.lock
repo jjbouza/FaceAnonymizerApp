@@ -1,0 +1,28 @@
+PODS:
+  - LibTorch (1.4.0):
+    - LibTorch/Core (= 1.4.0)
+  - LibTorch/Core (1.4.0):
+    - LibTorch/Torch
+  - LibTorch/Torch (1.4.0)
+  - TensorFlowLiteC (2.1.0)
+  - TensorFlowLiteSwift (2.1.0):
+    - TensorFlowLiteC (= 2.1.0)
+
+DEPENDENCIES:
+  - LibTorch (~> 1.4)
+  - TensorFlowLiteSwift
+
+SPEC REPOS:
+  trunk:
+    - LibTorch
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
+
+SPEC CHECKSUMS:
+  LibTorch: 37dfd10df8a064f705d81ede22098d5a5e82571b
+  TensorFlowLiteC: 215603d4426d93810eace5947e317389554a4b66
+  TensorFlowLiteSwift: 9d8137f18d5ac30ca89bba4fbe118e0949ac5743
+
+PODFILE CHECKSUM: 17af3a8747b26e46be47e6b8dffe75eaac64ca1f
+
+COCOAPODS: 1.9.1
