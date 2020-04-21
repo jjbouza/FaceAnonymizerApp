@@ -19,14 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //load image
-        let image = UIImage(named: "img.jpg")!
-        let resizedImage = image
-        guard var pixelBuffer = resizedImage.normalized() else {
-            fatalError()
-        }
         
-        let network_process = NetworkProcessing()
-        network_process.predict(image: image)
         
         
         return true

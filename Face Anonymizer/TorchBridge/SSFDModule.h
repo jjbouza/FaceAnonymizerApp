@@ -33,8 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
                                                    ol10: (void*)ol10
                                                    ol11: (void*)ol11
                                                    ol12: (void*)ol12
-                                                   ols: (NSArray<NSNumber*>*)ols
-                                                    NS_SWIFT_NAME(predict(ol1:ol2:ol3:ol4:ol5:ol6:ol7:ol8:ol9:ol10:ol11:ol12:ols:));
+                                                   ols1: (NSArray<NSNumber*>*)ols1
+                                                   ols2: (NSArray<NSNumber*>*)ols2
+                                                    NS_SWIFT_NAME(predict(ol1:ol2:ol3:ol4:ol5:ol6:ol7:ol8:ol9:ol10:ol11:ol12:ols1:ols2:));
 
 @end
 

@@ -18,6 +18,16 @@ extension UIImage {
         return image
     }
     
+    func resized(toWidth width: CGFloat) -> UIImage {
+        print(size.width)
+        print(size.height)
+        let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()!
+    }
+    
     func normalized() -> [Float32]? {
     guard let cgImage = self.cgImage else {
         return nil
@@ -53,30 +63,31 @@ extension UIImage {
         return normalizedBuffer
     }
     
-    func buffer() -> CVPixelBuffer? {
-      let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
-      var pixelBuffer : CVPixelBuffer?
-      let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(self.size.width), Int(self.size.height), kCVPixelFormatType_32BGRA, attrs, &pixelBuffer)
-      guard (status == kCVReturnSuccess) else {
-        return nil
-      }
-
-      CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-      let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
-
-      let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
-      let context = CGContext(data: pixelData, width: Int(self.size.width), height: Int(self.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
-
-      context?.translateBy(x: 0, y: self.size.height)
-      context?.scaleBy(x: 1.0, y: -1.0)
-
-      UIGraphicsPushContext(context!)
-      self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
-      UIGraphicsPopContext()
-      CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-
-      return pixelBuffer
+    func pixelBuffer () -> CVPixelBuffer? {
+        let image = self.cgImage!
+        let frameSize = CGSize(width: image.width, height: image.height)
+        
+        var pixelBuffer:CVPixelBuffer? = nil
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(frameSize.width), Int(frameSize.height), kCVPixelFormatType_32BGRA , nil, &pixelBuffer)
+        
+        if status != kCVReturnSuccess {
+            return nil
+            
+        }
+        
+        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags.init(rawValue: 0))
+        let data = CVPixelBufferGetBaseAddress(pixelBuffer!)
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.premultipliedFirst.rawValue)
+        let context = CGContext(data: data, width: Int(frameSize.width), height: Int(frameSize.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: bitmapInfo.rawValue)
+        
+        
+        context?.draw(image, in: CGRect(x: 0, y: 0, width: image.width, height: image.height))
+        
+        CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+        
+        return pixelBuffer
+        
     }
-
 }
 
